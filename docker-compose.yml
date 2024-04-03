@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  cicd-demo:
+    image: cicd-example:v2
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/cicd-example
+    ports:
+      - "8080:8080"
