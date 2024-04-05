@@ -44,3 +44,11 @@ jobs:
           name: coverage-report
           path: "${{ github.workspace }}/**/target/site/jacoco/index.html"
 
+      - name: upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: './htmlcov/'
+
+      - name: deploy to Github Pages
+        uses: actions/deploy-pages@v2
+        id: deployment
