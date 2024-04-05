@@ -47,7 +47,7 @@ jobs:
       - name: upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: './htmlcov/'
+          path: 'target/site/jacoco/'
 
       - name: deploy to Github Pages
         uses: actions/deploy-pages@v2
