@@ -47,7 +47,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # location of the coverage artifacts
-          path: "./coverage"
+          path: './target/site/jacoco/' #"./coverage"
 
   # Single deploy job since we're just deploying
   deploy-coverage:
