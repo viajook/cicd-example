@@ -34,13 +34,13 @@ jobs:
       #  with:
       #    name: test-coverage-report
       #    path: coverage
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          # Upload the coverage directory from the repository
-          path: './coverage/'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+      #- name: Setup Pages
+      #  uses: actions/configure-pages@v2
+      #- name: Upload artifact
+      #  uses: actions/upload-pages-artifact@v1
+      #  with:
+      #    # Upload the coverage directory from the repository
+      #    path: './coverage/'
+      #- name: Deploy to GitHub Pages
+      #  id: deployment
+      #  uses: actions/deploy-pages@v1

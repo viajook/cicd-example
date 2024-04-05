@@ -12,6 +12,10 @@ jobs:
     name: Unit tests
     #Run on Ubuntu using the latest version
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     #Job's steps
     steps:
       #Check-out your repository under
@@ -27,3 +31,12 @@ jobs:
       - name: Run Tests
         run: mvn -B test
       # Report Coverage
+      - name: Coverage
+        id: jacoco
+        uses: madrapps/jacoco-report@v1.6.1
+        with:
+            paths: |
+              ${{ github.workspace }}/**/target/site/jacoco/jacoco.xml
+            token: ${{ secrets.GITHUB_TOKEN }}
+            min-coverage-overall: 40
+            min-coverage-changed-files: 60
