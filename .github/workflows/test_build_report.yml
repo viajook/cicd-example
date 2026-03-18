@@ -16,7 +16,7 @@ jobs:
     steps:
       #Check-out your repository under test
       - uses: actions/checkout@v4
-      #Set up JDK 21
+      # Set up JDK 21
       - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
